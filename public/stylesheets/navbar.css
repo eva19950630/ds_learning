@@ -1,0 +1,55 @@
+.navbar {
+	background: transparent;
+	width: 90vw;
+	height: 12vh;
+	font-size: 20px;
+	list-style-type: none;
+    margin: 0 0 0 5vw;
+    padding: 0;
+    overflow: hidden;
+}
+.navbar a {
+	display: inline-block;
+	padding: 0 20px;
+	float: left;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+.navbar .right {
+	float: right;
+}
+
+.nav-mobile {
+	display: none;
+}
+
+/*Mobile*/
+@media screen and (max-width: 400px) {
+	.navbar {
+		display: none;
+	}
+	.nav-mobile {
+		float: left;
+		display: block;
+		/*background: #f0f0f0;*/
+		width: 100vw;
+		height: 35vh;
+	}
+	.nav-mobile .menubtn {
+		margin: 5vh 0 0 6vw;
+		background: transparent;
+		border: none;
+		color: #fff;
+		font-size: 20px;
+	}
+	.dropdown-menu {
+		width: 100%;
+		border: none;
+		border-radius: 0;
+	}
+	.dropdown-menu li > a {
+		font-size: 18px;
+		color: #999;
+	}
+}
