@@ -22,21 +22,31 @@
         <link rel='stylesheet' href="/stylesheets/style.css"/>
         <link rel='stylesheet' href="/stylesheets/navbar.css"/>
         <link rel='stylesheet' href="/stylesheets/content.css"/>
+
     </head>
     <body>
+        <!-- mobile -->
         <div class="nav-mobile">
-            <button class="dropdown-toggle menubtn" type="button" data-toggle="dropdown"><i class="fa fa-bars">&emsp;Menu</i></button>
-            <ul class="dropdown-menu">
-                <li><a href=""><i class="fa fa-search"></i></a></li>
-                <li><a href="">首頁</a></li>
-                <li class="divider"></li>
-                <li><a href="">學習</a></li>
-                <li><a href="">筆記</a></li>
-                <li class="divider"></li>
-                <li><a href="">登入</a></li>
-                <li><a href="">註冊</a></li>
-            </ul>
+            <label for="menu-toggle" class="menubtn"><i class="fa fa-bars">&emsp;Menu</i></label>
+            <input type="checkbox" id="menu-toggle">
+            <div class="menu">
+                <!-- <span class="arrow"></span> -->
+                <div class="menulist">
+                    <form class="search-container">
+                        <input type="text" placeholder="Search instructions, notes..." id="searchbar">
+                        <a href="#"><i class="fa fa-search searchicon"></i></a>
+                    </form>
+                    <a href="#">首頁</a>
+                    <li class="divider"></li>
+                    <a href="#">學習</a>
+                    <a href="#">筆記</a>
+                    <li class="divider"></li>
+                    <a href="#">登入</a>
+                    <a href="#">註冊</a>
+                </div>
+            </div>
         </div>
+        <!-- desktop/tablet -->
         <div class="navbar">
             <a href=""><i class="fa fa-bars">&emsp;Menu</i></a>
             <div class="right">
