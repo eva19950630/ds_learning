@@ -30,10 +30,9 @@
             <label for="menu-toggle" class="menubtn"><i class="fa fa-bars">&emsp;Menu</i></label>
             <input type="checkbox" id="menu-toggle">
             <div class="menu">
-                <!-- <span class="arrow"></span> -->
                 <div class="menulist">
                     <form class="search-container">
-                        <input type="text" placeholder="Search instructions, notes..." id="searchbar">
+                        <input type="text" placeholder="Search instructions, notes..." id="searchbar" name="search">
                         <a href="#"><i class="fa fa-search searchicon"></i></a>
                     </form>
                     <a href="#">首頁</a>
@@ -49,21 +48,84 @@
         
         <!-- desktop/tablet -->
         <div class="navbar">
-            <a href=""><font class="navlink1"><i class="fa fa-bars">&emsp;Menu</i></font></a>
+            <a href="#menu"><font class="navlink1"><i class="fa fa-bars">&emsp;Menu</i></font></a>
             <div class="right">
-                <a href=""><font class="navlink2"><i class="fa fa-search"></i></font></a>
+                <a href=""><font class="navlink1"><i class="fa fa-search"></i></font></a>
                 <a href=""><font class="navlink2">登入</font></a>
                 <a href=""><font class="navlink2">註冊</font></a>
             </div>
         </div>
         <!-- menu slide -->
-        <div class="slide">
+        <div class="slide" id="menusidepage">
             <div class="slidetitle">
-                <a href="#"><i class="fa fa-times"></i>&emsp;Menu</a>
+                <a href="#" id="closeslide"><i class="fa fa-times"></i>&emsp;Menu</a>
             </div>
             <div class="slidebody">
-                <a href="#">學習</a>
-                <a href="#">筆記</a>
+                <a href="#learning">學習</a>
+                <a href="#note">筆記</a>
+            </div>
+        </div>
+        <!-- menu: learning slide -->
+        <div class="slide sec" id="learningsidepage">
+            <a href="#" id="backslide"><i class="fa fa-angle-left"></i>&ensp;Back</a>
+            <div class="slidesectitle">
+                學習<p></p>
+            </div>
+            <div class="slidebody sec">
+                <a href="#">Array</a>
+                <a href="#">Stack & Queue</a>
+                <a href="#">List</a>
+                <a href="#">Tree</a>
+                <a href="#">Graph</a>
+                <a href="#">Sort</a>
+            </div>
+        </div>
+        <!-- menu: note slide -->
+        <div class="slide sec" id="notesidepage">
+            <a href="#" id="backslide"><i class="fa fa-angle-left"></i>&ensp;Back</a>
+            <div class="slidesectitle">
+                筆記<p></p>
+            </div>
+            <div class="slidebody sec">
+                <a href="#">HOT 熱門</a>
+                <a href="#">TAG 排序</a>
+            </div>
+        </div>
+        <!-- signup slide -->
+        <div class="slide" id="siguupslidepage">
+            <div class="slidetitle">
+                <a href="#" id="closeslide"><i class="fa fa-times"></i>&emsp;註冊</a>
+            </div>
+            <div class="slidebody middle">
+                <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;使用Google帳號註冊</button>
+                <p class="or"><span>or</span></p>
+                <form class="emailform">
+                    <p class="inputtitle account">Email *</p><input type="text" name="email" id="inputbar" required>
+                    <p class="inputtitle account">暱稱 *</p><input type="text" name="username" id="inputbar" required>
+                    <p class="inputtitle account">密碼 *</p><input type="password" name="password" id="inputbar" required>
+                    <p class="inputtitle account">確認密碼 *</p><input type="password" name="password" id="inputbar" required>
+                    <input type="submit" class="cusbtn submit" name="signup" value="註冊">
+                </form>
+                <hr>
+                <a href="" class="footlink right" id="changetologin">已有帳號了?</a>
+            </div>
+        </div>
+        <!-- login slide -->
+        <div class="slide" id="loginslidepage">
+            <div class="slidetitle">
+                <a href="#" id="closeslide"><i class="fa fa-times"></i>&emsp;登入</a>
+            </div>
+            <div class="slidebody middle">
+                <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;使用Google帳號註冊</button>
+                <p class="or"><span>or</span></p>
+                <form class="emailform">
+                    <p class="inputtitle account">Email *</p><input type="text" name="email" id="inputbar" required>
+                    <p class="inputtitle account">密碼 *</p><input type="password" name="password" id="inputbar" required>
+                    <input type="submit" class="cusbtn submit" name="signup" value="登入">
+                </form>
+                <hr>
+                <a href="" class="footlink left" id="changetosignup">忘記密碼?</a>
+                <a href="" class="footlink right" id="changetosignup">註冊新帳號</a>
             </div>
         </div>
 
