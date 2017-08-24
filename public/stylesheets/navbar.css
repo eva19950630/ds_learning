@@ -83,6 +83,7 @@
 	border-left: 3px solid #5C7273;
 	padding-left: 25px;
 }
+
 .slidebody.sec {
 	margin: 25px 0 0 0;
 }
@@ -100,6 +101,7 @@ a#backslide {
 	padding-left: 2em;
 	text-decoration: none;
 }
+a#backslide:hover { opacity: 0.8; }
 a#backslide i { font-size: 18px; }
 .slidesectitle {
 	font-size: 23px;
@@ -112,9 +114,12 @@ a#backslide i { font-size: 18px; }
 	width: 90%;
 	padding-top: 0.2em;
 }
-.slidebody.middle {
-	position: absolute;
+
+.slidebody.center {
+	width: 350px;
 	text-align: center;
+	/*border: 1px solid #000;*/
+	margin: 0 auto;
 }
 .cusbtn.google {
 	border: none;
@@ -147,6 +152,9 @@ p.or:after {
 form.emailform {
 	margin: -10px 0 0 0;
 }
+form.emailform input {
+	margin: 0 auto;
+}
 .inputtitle.account {
 	margin: 0 0 3px 1.5em;
 }
@@ -174,7 +182,7 @@ input#inputbar:visited {
 	width: 80px;
 	margin: 0 0 10px 0;
 }
-.slidebody.middle hr { 
+.slidebody.center hr { 
 	width: 85%;
 	background-color: #ccc;
 }
@@ -186,20 +194,16 @@ input#inputbar:visited {
 	margin: 5px 25px;
 }
 .slidebody a.footlink:hover {
+	opacity: 0.8;
 	border-left: 0;
 	padding-left: 0;
 }
 
-.nav-mobile {
-	display: none;
-}
+.nav-mobile { display: none; }
 
 /*mobile*/
 @media screen and (max-width: 600px) {
-	.navbar,
-	.slide {
-		display: none;
-	}
+	.navbar { display: none; }
 	.nav-mobile {
 		float: left;
 		display: block;
@@ -294,7 +298,14 @@ input#inputbar:visited {
 		color: #fff;
 		font-size: 20px;
 	}
-	.searchicon:hover {
-		opacity: 0.8;
+	.searchicon:hover { opacity: 0.8; }
+
+	.slide.right { position: absolute; }
+}
+
+@media screen and (max-width: 359px) {
+	.slidebody.center { 
+		margin-left: -5vw;
+		transform: scale(0.95); 
 	}
 }

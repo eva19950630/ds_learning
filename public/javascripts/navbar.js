@@ -1,3 +1,6 @@
+var width = $(document).width();
+console.log(width);
+
 $("body a").on("click", function(e){
 	e.preventDefault();
 	var hrefvar = $(this).attr("href");
@@ -10,17 +13,39 @@ $("body a").on("click", function(e){
 		case "#learning":
 			document.getElementById("learningsidepage").style.width = "345px";
 			break;
+		case "#m_learning":
+			document.getElementById("learningsidepage").style.width = "100vw";
+			break;
 		case "#note":
 			document.getElementById("notesidepage").style.width = "345px";
+			break;
+		case "#m_note":
+			document.getElementById("notesidepage").style.width = "100vw";
 			break;
 		case "#signup":
 			document.getElementById("signupsidepage").style.width = "350px";
 			break;
+		case "#m_signup":
+			document.getElementById("signupsidepage").style.width = "100vw";
+			break;
 		case "#login":
 			document.getElementById("loginsidepage").style.width = "350px";
 			break;
+		case "#m_login":
+			document.getElementById("loginsidepage").style.width = "100vw";
+			break;
 		case "#":
-			closesidepage(idvar);
+			switch (idvar) {
+				case "closemenu":
+					document.getElementById("menusidepage").style.width = "0";
+					break;
+				case "closesignup":
+					document.getElementById("signupsidepage").style.width = "0";
+					break;
+				case "closelogin":
+					document.getElementById("loginsidepage").style.width = "0";
+					break;
+			}
 			break;
 	}
 	switch (idvar) {
@@ -29,27 +54,18 @@ $("body a").on("click", function(e){
 			document.getElementById("notesidepage").style.width = "0";
 			break;
 		case "changetologin":
+			if (width < 600)
+				document.getElementById("loginsidepage").style.width = "100vw";
+			else
+				document.getElementById("loginsidepage").style.width = "350px";
 			document.getElementById("signupsidepage").style.width = "0";
-			document.getElementById("loginsidepage").style.width = "350px";
 			break;
 		case "changetosignup":
+			if (width < 600)
+				document.getElementById("signupsidepage").style.width = "100vw";
+			else
+				document.getElementById("signupsidepage").style.width = "350px";
 			document.getElementById("loginsidepage").style.width = "0";
-			document.getElementById("signupsidepage").style.width = "350px";
 			break;
 	}
 });
-
-function closesidepage(idvar) {
-	// console.log(idvar);
-	switch (idvar) {
-		case "closemenu":
-			document.getElementById("menusidepage").style.width = "0";
-			break;
-		case "closesignup":
-			document.getElementById("signupsidepage").style.width = "0";
-			break;
-		case "closelogin":
-			document.getElementById("loginsidepage").style.width = "0";
-			break;
-	}
-}
