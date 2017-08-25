@@ -13,23 +13,24 @@ $("body a").on("click", function(e){
 		case "#learning":
 			document.getElementById("learningsidepage").style.width = "345px";
 			break;
-		case "#m_learning":
-			document.getElementById("learningsidepage").style.width = "100vw";
-			break;
 		case "#note":
 			document.getElementById("notesidepage").style.width = "345px";
-			break;
-		case "#m_note":
-			document.getElementById("notesidepage").style.width = "100vw";
 			break;
 		case "#signup":
 			document.getElementById("signupsidepage").style.width = "350px";
 			break;
-		case "#m_signup":
-			document.getElementById("signupsidepage").style.width = "100vw";
-			break;
 		case "#login":
 			document.getElementById("loginsidepage").style.width = "350px";
+			break;
+		// mobile
+		case "#m_learning":
+			document.getElementById("learningsidepage").style.width = "100vw";
+			break;
+		case "#m_note":
+			document.getElementById("notesidepage").style.width = "100vw";
+			break;
+		case "#m_signup":
+			document.getElementById("signupsidepage").style.width = "100vw";
 			break;
 		case "#m_login":
 			document.getElementById("loginsidepage").style.width = "100vw";
@@ -66,6 +67,11 @@ $("body a").on("click", function(e){
 			else
 				document.getElementById("signupsidepage").style.width = "350px";
 			document.getElementById("loginsidepage").style.width = "0";
+			break;
+		// mobile
+		case "changetoindex":
+			document.getElementById("mobilemenu").style.display = "none";
+			$(location).attr('href', 'http://localhost:3000/')
 			break;
 	}
 });

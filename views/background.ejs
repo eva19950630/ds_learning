@@ -29,31 +29,33 @@
         <div class="nav-mobile">
             <label for="menu-toggle" class="menubtn"><i class="fa fa-bars">&emsp;Menu</i></label>
             <input type="checkbox" id="menu-toggle">
-            <div class="menu">
-                <div class="menulist">
-                    <form class="search-container">
-                        <input type="text" placeholder="Search instructions, notes..." id="searchbar" name="search">
-                        <a href="#"><i class="fa fa-search searchicon"></i></a>
-                    </form>
-                    <a href="/hello">首頁</a>
-                    <li class="divider"></li>
-                    <a href="#m_learning">學習</a>
-                    <a href="#m_note">筆記</a>
-                    <li class="divider"></li>
-                    <a href="#m_login">登入</a>
-                    <a href="#m_signup">註冊</a>
-                </div>
+            <div class="menu" id="mobilemenu">
+                <form class="searchform mobile">
+                    <input type="text" placeholder="Search instructions, notes..." name="search" id="mobilesearchbar">
+                    <a href="#"><i class="fa fa-search searchicon mobile"></i></a>
+                </form>
+                <a href="" id="changetoindex">首頁</a>
+                <li class="divider"></li>
+                <a href="#m_learning">學習</a>
+                <a href="#m_note">筆記</a>
+                <li class="divider"></li>
+                <a href="#m_login">登入</a>
+                <a href="#m_signup">註冊</a>
             </div>
         </div>
-        
+
         <!-- desktop/tablet -->
         <div class="navbar">
-            <a href="#menu"><font class="navlink1"><i class="fa fa-bars">&emsp;Menu</i></font></a>
+            <a href="#menu"><font class="navlink1"><i class="fa fa-bars">&emsp;Menu</i></font></a> 
+            <!-- <form class="searchform">
+                <input type="text" placeholder="Search instructions, notes..." name="search" id="searchbar">
+                <a href="" class="searchbtn"><i class="fa fa-search searchicon"></i></a>
+            </form> -->
+
             <div class="right">
-                <a href=""><font class="navlink1"><i class="fa fa-search"></i></font></a>
                 <a href="#login"><font class="navlink2">登入</font></a>
                 <a href="#signup"><font class="navlink2">註冊</font></a>
-            </div>
+            </div>   
         </div>
         <!-- menu slide -->
         <div class="slide" id="menusidepage">
@@ -100,7 +102,7 @@
                 <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;使用Google帳號註冊</button>
                 <p class="or"><span>or</span></p>
                 <form class="emailform">
-                    <p class="inputtitle account">Email *</p><input type="text" name="email" id="inputbar" required>
+                    <p class="inputtitle account">Email *</p><input type="email" name="email" id="inputbar" required>
                     <p class="inputtitle account">暱稱 *</p><input type="text" name="username" id="inputbar" required>
                     <p class="inputtitle account">密碼 *</p><input type="password" name="password" id="inputbar" required>
                     <p class="inputtitle account">確認密碼 *</p><input type="password" name="password" id="inputbar" required>
@@ -119,7 +121,7 @@
                 <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;使用Google帳號註冊</button>
                 <p class="or"><span>or</span></p>
                 <form class="emailform">
-                    <p class="inputtitle account">Email *</p><input type="text" name="email" id="inputbar" required>
+                    <p class="inputtitle account">Email *</p><input type="email" name="email" id="inputbar" required>
                     <p class="inputtitle account">密碼 *</p><input type="password" name="password" id="inputbar" required>
                     <input type="submit" class="cusbtn submit" name="signup" value="登入">
                 </form>
