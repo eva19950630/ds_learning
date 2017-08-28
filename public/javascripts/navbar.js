@@ -1,6 +1,6 @@
 var width = $(document).width();
 console.log(width);
-
+//navbar link
 $("body a").on("click", function(e){
 	e.preventDefault();
 	var hrefvar = $(this).attr("href");
