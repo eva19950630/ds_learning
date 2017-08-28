@@ -1,19 +1,22 @@
-.indexpic {
+.content {
 	background: #fff;
 	width: 90vw;
 	height: 82vh;
-	position: relative;
+	position: absolute;
 	z-index: 0;
-	margin: 0 auto;
+	overflow: auto;
 	top: 12vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.content.indexpage {
+	overflow: hidden;
 }
 
 /*mobile*/
-@media screen and (max-width: 600px) {
-	.indexpic {
+@media screen and (max-width: 768px) {
+	.content {
 		width: 100vw;
-		position: absolute;
-		top: 12vh;
 		z-index: -1;
 	}
 }
