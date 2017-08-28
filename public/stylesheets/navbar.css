@@ -16,6 +16,7 @@
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
+	line-height: 12vh;
 }
 .navbar .right {
 	float: right;
@@ -39,9 +40,9 @@ button.searchbtn {
 form.searchform {
 	position: relative;
 	display: inline-block;
-	width: 270px;
+	width: 260px;
 	height: 36px;
-	margin: 0 0 0 1vw;
+	margin: 25px 0 0 1vw;
 }
 input#searchbar {
 	border: 2px solid #fff;
@@ -297,7 +298,7 @@ input#inputbar:focus {
 		height: 50px;
 		right: 0;
 		background: rgba(92, 114, 115, 1);
-		margin:0 0 25px 0;
+		margin:0 0 15px 0;
 	}
 	form.searchform.mobile a { height: 0; }
 	input#mobilesearchbar {
@@ -350,5 +351,12 @@ input#inputbar:focus {
 	.slidebody.center { 
 		margin-left: -5vw;
 		transform: scale(0.95); 
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 649px) {
+	form.searchform {
+		margin-left: -3vw;
+		transform: scale(0.9); 
 	}
 }
