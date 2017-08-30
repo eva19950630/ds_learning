@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/dslearning_db');
+mongoose.connect('mongodb://localhost/dslearning_db', {
+  useMongoClient: true,
+});
 
 var app = express();
 

@@ -17,5 +17,6 @@ body {
 	padding: 5px 20px;
 	color: #666;
 	letter-spacing: 1px;
+	outline: 0;
 }
 .cusbtn:hover { opacity: 0.9; }
