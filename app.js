@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var flash = require('connect-flash');
 
 var routes = require('./routes/index');
 var mongoose = require('mongoose');
@@ -25,6 +27,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({secret: '{secret}', name: 'session_id', saveUninitialized: true, resave: true}));
+app.use(flash());
+app.use(function (req,res,next) {
+    console.log("app.usr local");
+    res.locals.user = req.session.user;
+    var err = req.flash('error');
+    res.locals.error = err.length ? err: null;
+    var success = req.flash('success');
+    res.locals.success = success.length ? success : null;
+    next();
+});
 
 routes(app);
 

@@ -20,3 +20,5 @@ body {
 	outline: 0;
 }
 .cusbtn:hover { opacity: 0.9; }
+
+.alert { font-size: 14px; }

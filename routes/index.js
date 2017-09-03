@@ -13,15 +13,19 @@ module.exports = function(app) {
   		if (err)
   			res.send('Unknown error!');
   		else {
-  			if (user.length > 0)
-  				res.send('This email has already been registered!');
+  			if (user.length > 0) {
+  				req.flash('error', '這個email已被註冊，請重新註冊!');
+          res.redirect('/');
+        }
   			else {
   				var newUser = new Models.User({username:req.body.username, email:req.body.email, password:bcrypt.hashSync(req.body.password)});
   				newUser.save(function(err) {
   					if (err)
   						res.send('Unknown error!');
-  					else
-  						res.send("Registered successfully!");
+  					else {
+  						req.flash('success', '你的email已成功註冊!');
+              res.redirect('/');
+            }
   				});
   			}
   		}		
