@@ -24,10 +24,10 @@
 
 button.searchbtn {
 	width: 60px;
-	height: 32px;
+	height: 30px;
 	background: #fff;
 	color: #999;
-	font-size: 18px;
+	font-size: 17px;
 	position: absolute;
 	right: -22px;
 	top: 2px;
@@ -47,11 +47,11 @@ form.searchform {
 input#searchbar {
 	border: 2px solid #fff;
 	border-radius: 5px;
-	height: 32px;
+	height: 30px;
 	margin-bottom: -20px;
 	color: #fff;
 	padding: 0 10px;
-	font-size: 15px;
+	font-size: 14px;
 	letter-spacing: 1px;
 }
 input#searchbar:focus {
