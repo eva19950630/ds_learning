@@ -34,43 +34,49 @@
                     <input type="text" placeholder="Search instructions, notes..." name="search" id="mobilesearchbar">
                     <button type="submit" class="searchbtn mobile"><i class="fa fa-search"></i></button>
                 </form>
-                <a href="" id="changetoindex">首頁</a>
+                <a href="/">首頁</a>
                 <li class="divider"></li>
-                <a href="#m_learning">學習</a>
-                <a href="#m_note">筆記</a>
+                <a href="#" onclick="openlearningslide();">學習</a>
+                <a href="#" onclick="opennoteslide();">筆記</a>
                 <li class="divider"></li>
-                <a href="#m_login">登入</a>
-                <a href="#m_signup">註冊</a>
+                <a href="#" onclick="openloginslide();">登入</a>
+                <a href="#" onclick="opensignupslide();">註冊</a>
             </div>
         </div>
 
         <!-- desktop/tablet -->
         <div class="navbar">
             <div class="left">
-                <a href="#menu"><i class="fa fa-bars">&emsp;<font class="navlink2">Menu</i></font></a> 
+                <a href="#" onclick="openmenuslide();"><font class="navlink1"><i class="fa fa-bars"></i></font></a>
+                <a href="/">[LOGO]</a>
                 <form class="searchform">
                     <input type="text" placeholder="Search instructions, notes..." name="search" id="searchbar">
                     <button type="submit" class="searchbtn"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <div class="right">
-                <a href="#login"><font class="navlink2">登入</font></a>
-                <a href="#signup"><font class="navlink2">註冊</font></a>
+                <% if (login) { %>
+                <a href="#"><img src="/images/1.jpg" class="usericon">&ensp;<font class="navlink2"><%= user.username %></font></a>
+                <a href="/logout"><font class="navlink2">登出</font></a>
+                <% } else { %>
+                <a href="#" onclick="openloginslide();"><font class="navlink2">登入</font></a>
+                <a href="#" onclick="opensignupslide();"><font class="navlink2">註冊</font></a>
+                <% } %>
             </div>   
         </div>
         <!-- menu slide -->
         <div class="slide" id="menusidepage">
             <div class="slidetitle">
-                <a href="#" id="closemenu"><i class="fa fa-times"></i>&emsp;Menu</a>
+                <a href="#" onclick="closemenuslide();"><i class="fa fa-times"></i>&emsp;Menu</a>
             </div>
             <div class="slidebody">
-                <a href="#learning">學習</a>
-                <a href="#note">筆記</a>
+                <a href="#" onclick="openlearningslide();">學習</a>
+                <a href="#" onclick="opennoteslide();">筆記</a>
             </div>
         </div>
         <!-- menu: learning slide -->
         <div class="slide sec" id="learningsidepage">
-            <a href="#" id="backslide"><i class="fa fa-angle-left"></i>&ensp;Back</a>
+            <a href="#" id="backslide" onclick="backslide();"><i class="fa fa-angle-left"></i>&ensp;Back</a>
             <div class="slidesectitle">
                 學習<p></p>
             </div>
@@ -85,7 +91,7 @@
         </div>
         <!-- menu: note slide -->
         <div class="slide sec" id="notesidepage">
-            <a href="#" id="backslide"><i class="fa fa-angle-left"></i>&ensp;Back</a>
+            <a href="#" id="backslide" onclick="backslide();"><i class="fa fa-angle-left"></i>&ensp;Back</a>
             <div class="slidesectitle">
                 筆記<p></p>
             </div>
@@ -97,7 +103,7 @@
         <!-- signup slide -->
         <div class="slide right" id="signupsidepage">
             <div class="slidetitle">
-                <a href="#" id="closesignup"><i class="fa fa-times"></i>&emsp;註冊</a>
+                <a href="#" onclick="closesignupslide();"><i class="fa fa-times"></i>&emsp;註冊</a>
             </div>
             <div class="slidebody center">
                 <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;&ensp;使用Google帳號註冊</button>
@@ -110,25 +116,25 @@
                     <input type="submit" class="cusbtn submit" name="signup" value="註冊">
                 </form>
                 <hr>
-                <a href="#" class="footlink right" id="changetologin">已有帳號了?</a>
+                <a href="#" class="footlink right" onclick="changetologin();">已有帳號了?</a>
             </div>
         </div>
         <!-- login slide -->
         <div class="slide right" id="loginsidepage">
             <div class="slidetitle">
-                <a href="#" id="closelogin"><i class="fa fa-times"></i>&emsp;登入</a>
+                <a href="#" onclick="closeloginslide();"><i class="fa fa-times"></i>&emsp;登入</a>
             </div>
             <div class="slidebody center">
                 <button class="cusbtn google"><i class="fa fa-google"></i>&emsp;&ensp;使用Google帳號註冊</button>
                 <p class="or"><span>or</span></p>
-                <form class="emailform">
+                <form action="/login" method="POST" class="emailform">
                     <p class="inputtitle account">Email</p><input type="email" name="email" id="inputbar" required>
                     <p class="inputtitle account">密碼</p><input type="password" name="password" id="inputbar" required>
                     <input type="submit" class="cusbtn submit" name="signup" value="登入">
                 </form>
                 <hr>
-                <a href="" class="footlink left" id="changetosignup">忘記密碼?</a>
-                <a href="" class="footlink right" id="changetosignup">註冊新帳號</a>
+                <a href="" class="footlink left">忘記密碼?</a>
+                <a href="#" class="footlink right" onclick="changetosignup();">註冊新帳號</a>
             </div>
         </div>
 

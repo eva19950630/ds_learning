@@ -2,7 +2,7 @@
 	background: transparent;
 	width: 90vw;
 	height: 12vh;
-	font-size: 20px;
+	font-size: 18px;
     margin: 0 0 0 5vw;
     padding: 0;
     overflow: hidden;
@@ -76,6 +76,12 @@ input#searchbar:-ms-input-placeholder { color: #fff; }
 input#searchbar:focus:-ms-input-placeholder {
 	transition: opacity 0.45s ease;
 	opacity: 0;
+}
+
+.usericon {
+	border-radius: 100%;
+	width: 35px;
+	height: 35px;
 }
 
 .navlink1:hover {

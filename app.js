@@ -6,10 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
+var passport = require('passport');
 
 var routes = require('./routes/index');
 var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/dslearning_db');
 mongoose.connect('mongodb://localhost/dslearning_db', {
   useMongoClient: true,
 });
@@ -39,6 +39,8 @@ app.use(function (req,res,next) {
     res.locals.success = success.length ? success : null;
     next();
 });
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 routes(app);
 
