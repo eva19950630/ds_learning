@@ -1,15 +1,16 @@
 .content {
 	background: #fff;
 	width: 90vw;
-	height: 82vh;
+	height: 85vh;
 	position: absolute;
 	z-index: 0;
 	overflow: auto;
-	top: 12vh;
+	top: 10vh;
 	left: 50%;
 	transform: translateX(-50%);
 }
-.content.indexpage {
+.content.indexpage,
+.content.tree {
 	overflow: hidden;
 }
 

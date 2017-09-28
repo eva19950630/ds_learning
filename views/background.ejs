@@ -22,11 +22,12 @@
         <link rel='stylesheet' href="/stylesheets/style.css"/>
         <link rel='stylesheet' href="/stylesheets/navbar.css"/>
         <link rel='stylesheet' href="/stylesheets/content.css"/>
+        <link rel='stylesheet' href="/stylesheets/tree.css"/>
 
     </head>
     <body>
         <!-- mobile -->
-        <div class="nav-mobile">
+        <!-- <div class="nav-mobile">
             <label for="menu-toggle" class="menubtn"><i class="fa fa-bars">&emsp;Menu</i></label>
             <input type="checkbox" id="menu-toggle">
             <div class="menu" id="mobilemenu">
@@ -42,10 +43,17 @@
                 <a href="#" onclick="openloginslide();">登入</a>
                 <a href="#" onclick="opensignupslide();">註冊</a>
             </div>
-        </div>
+        </div> -->
 
         <!-- desktop/tablet -->
         <div class="navbar">
+            <div class="left">
+                <a href="/"><font class="navlink2">Home</font></a>
+                <!-- <a href="/tree_rpg"><font class="navlink2">Tree</font></a> -->
+            </div>
+        </div>
+        
+        <!-- <div class="navbar">
             <div class="left">
                 <a href="#" onclick="openmenuslide();"><font class="navlink1"><i class="fa fa-bars"></i></font></a>
                 <a href="/">[LOGO]</a>
@@ -55,17 +63,14 @@
                 </form>
             </div>
             <div class="right">
-                <% if (login) { %>
-                <a href="#"><img src="/images/1.jpg" class="usericon">&ensp;<font class="navlink2"><%= user.username %></font></a>
+                <a href="#"><img src="/images/1.jpg" class="usericon">&ensp;<font class="navlink2">123</font></a>
                 <a href="/logout"><font class="navlink2">登出</font></a>
-                <% } else { %>
                 <a href="#" onclick="openloginslide();"><font class="navlink2">登入</font></a>
                 <a href="#" onclick="opensignupslide();"><font class="navlink2">註冊</font></a>
-                <% } %>
             </div>   
-        </div>
+        </div> -->
         <!-- menu slide -->
-        <div class="slide" id="menusidepage">
+        <!-- <div class="slide" id="menusidepage">
             <div class="slidetitle">
                 <a href="#" onclick="closemenuslide();"><i class="fa fa-times"></i>&emsp;Menu</a>
             </div>
@@ -73,9 +78,9 @@
                 <a href="#" onclick="openlearningslide();">學習</a>
                 <a href="#" onclick="opennoteslide();">筆記</a>
             </div>
-        </div>
+        </div> -->
         <!-- menu: learning slide -->
-        <div class="slide sec" id="learningsidepage">
+        <!-- <div class="slide sec" id="learningsidepage">
             <a href="#" id="backslide" onclick="backslide();"><i class="fa fa-angle-left"></i>&ensp;Back</a>
             <div class="slidesectitle">
                 學習<p></p>
@@ -88,9 +93,9 @@
                 <a href="#">Graph</a>
                 <a href="#">Sort</a>
             </div>
-        </div>
+        </div> -->
         <!-- menu: note slide -->
-        <div class="slide sec" id="notesidepage">
+        <!-- <div class="slide sec" id="notesidepage">
             <a href="#" id="backslide" onclick="backslide();"><i class="fa fa-angle-left"></i>&ensp;Back</a>
             <div class="slidesectitle">
                 筆記<p></p>
@@ -99,9 +104,9 @@
                 <a href="#">HOT 熱門</a>
                 <a href="#">TAG 排序</a>
             </div>
-        </div>
+        </div> -->
         <!-- signup slide -->
-        <div class="slide right" id="signupsidepage">
+        <!-- <div class="slide right" id="signupsidepage">
             <div class="slidetitle">
                 <a href="#" onclick="closesignupslide();"><i class="fa fa-times"></i>&emsp;註冊</a>
             </div>
@@ -118,9 +123,9 @@
                 <hr>
                 <a href="#" class="footlink right" onclick="changetologin();">已有帳號了?</a>
             </div>
-        </div>
+        </div> -->
         <!-- login slide -->
-        <div class="slide right" id="loginsidepage">
+        <!-- <div class="slide right" id="loginsidepage">
             <div class="slidetitle">
                 <a href="#" onclick="closeloginslide();"><i class="fa fa-times"></i>&emsp;登入</a>
             </div>
@@ -136,7 +141,7 @@
                 <a href="" class="footlink left">忘記密碼?</a>
                 <a href="#" class="footlink right" onclick="changetosignup();">註冊新帳號</a>
             </div>
-        </div>
+        </div> -->
 
         <!-- Javascript -->
         <!-- jquery 3.2.1 js -->

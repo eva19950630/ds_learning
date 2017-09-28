@@ -1,0 +1,12 @@
+.gamehint {
+	padding: 10px 20px;
+}
+.gamehint .bignum {
+	font-weight: 500;
+	font-size: 30px;
+}
+.row.tree { padding: 0 10px; }
+.border.tree {
+	height: 70vh;
+	padding: 10px 10px;
+}
